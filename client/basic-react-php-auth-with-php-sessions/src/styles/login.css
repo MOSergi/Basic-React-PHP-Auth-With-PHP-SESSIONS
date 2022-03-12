@@ -1,0 +1,32 @@
+.formLogin {
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.formLogin input {
+    padding: 10px;
+    width: 285px;
+    text-align: center;
+}
+
+.formLogin button {
+    padding: 10px;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 18px;
+}
+
+.formLogin button:hover {
+    font-weight: bold;
+}
+
+.formLogin legend {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}

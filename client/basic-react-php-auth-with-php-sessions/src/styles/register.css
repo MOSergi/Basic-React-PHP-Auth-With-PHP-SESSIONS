@@ -1,0 +1,32 @@
+.formRegister {
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.formRegister input {
+    padding: 10px;
+    width: 285px;
+    text-align: center;
+}
+
+.formRegister button {
+    padding: 10px;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 18px;
+}
+
+.formRegister button:hover {
+    font-weight: bold;
+}
+
+.formRegister legend {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+.sectionHome {
+    width: 50%;
+    margin: auto;
+    padding-top: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.sectionHome button {
+    padding: 15px;
+    border-style: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #252d6b;
+}
+
+.sectionHome button:hover {
+    box-shadow: 7.5px 10px #252d6b;
+    background-color: #612a83;
+}
+
+.mensajeHover {
+    padding: 10px;
+    border-style: none;
+    border-radius: 7px;
+    background-color: none;
+    color: white;
+    width: 100px;
+    height: 35px;
+    transition: width 2s, height 2s, background-color 2s;
+}
