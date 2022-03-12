@@ -1,4 +1,4 @@
-# Basic-React-PHP-Server-With-PHP-SESSIONS
+# Basic-React-PHP-Auth-With-PHP-SESSIONS
 
 This project is an example-test of authentication using React and Php.
 
