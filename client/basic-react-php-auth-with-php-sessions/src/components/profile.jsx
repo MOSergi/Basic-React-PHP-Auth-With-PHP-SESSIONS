@@ -5,9 +5,8 @@ import userContextLog from "../context/userContext";
 
 function Profile(){
 
-    const {loginStatus, setLoginStatus} = useContext(userContextLog);
+    const {setLoginStatus} = useContext(userContextLog);
     const [name, setName] = useState("");
-
 
     const navegar = useNavigate();
 
@@ -19,8 +18,9 @@ function Profile(){
         .then((info) =>{
             if (info == "No Login"){
                 setLoginStatus(false);
-                navegar("/Login/");
+                navegar("/Login");
             } else {
+                setLoginStatus(true);
                 setName(info);
             }
         })
@@ -34,8 +34,8 @@ function Profile(){
         .then(respuesta => respuesta.json())
         .then((res)=>{
             alert(res);
-            navegar("/Login/");
             setLoginStatus(false);
+            navegar("/Login");
         })
         .catch(error => console.log(error))
     }

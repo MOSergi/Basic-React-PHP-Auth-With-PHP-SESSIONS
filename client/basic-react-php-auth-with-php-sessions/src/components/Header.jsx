@@ -5,22 +5,7 @@ import "../styles/header.css";
 
 function Header(){
 
-    const {loginStatus, setLoginStatus} = useContext(userContextLog);
-
-    useEffect(()=>{
-        fetch("http://localhost:5065/Basic-React-PHP-Auth-With-PHP-SESSIONS/server/userLoged.php", {
-            credentials : "include"
-        })
-        .then(respuesta => respuesta.json())
-        .then((infob) =>{
-            if (infob == "isLogedIn"){
-                setLoginStatus(true);
-            } else if (infob == "No Login"){
-                setLoginStatus(false);
-            }
-        })
-        .catch(errores => console.log(errores))
-    },[])
+    const {loginStatus} = useContext(userContextLog);
 
     if (loginStatus == false){
         return(

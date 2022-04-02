@@ -13,7 +13,6 @@ function Login(){
 
     const {loginStatus, setLoginStatus} = useContext(userContextLog);
 
-
     useEffect(()=>{
         fetch("http://localhost:5065/Basic-React-PHP-Auth-With-PHP-SESSIONS/server/userLoged.php", {
             credentials : "include"
@@ -22,6 +21,7 @@ function Login(){
         .then((info) =>{
             if (info == "isLogedIn"){
                 navegar("/Profile/");
+                setLoginStatus(true);
             } 
         })
         .catch(errores => console.log(errores))
@@ -49,7 +49,7 @@ function Login(){
                 alert(data);
             } else if (data == "LogedIn") {
                 setLoginStatus(true);
-                navegar("/Profile/");
+                navegar("/Profile");
             }
         })
         .catch(error => console.log(error))

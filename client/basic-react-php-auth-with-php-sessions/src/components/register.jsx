@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import userContextLog from "../context/userContext";
 import "../styles/register.css";
 
 function Register(){
@@ -7,6 +8,8 @@ function Register(){
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [pass, setPass] = useState("");
+
+    const { setLoginStatus } = useContext(userContextLog);
 
     const navegar = useNavigate();
 
@@ -18,6 +21,7 @@ function Register(){
         .then((data)=>{
             if (data == "isLogedIn"){
                 navegar("/Profile/");
+                setLoginStatus(true);
             }
         })
         .catch(error => console.log(error))
