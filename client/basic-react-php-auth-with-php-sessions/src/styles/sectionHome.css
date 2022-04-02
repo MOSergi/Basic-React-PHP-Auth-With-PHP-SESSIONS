@@ -21,13 +21,23 @@
     background-color: #612a83;
 }
 
-.mensajeHover {
+.mensajeHoverOC {
     padding: 10px;
     border-style: none;
     border-radius: 7px;
-    background-color: none;
+    background-color: white;
     color: white;
     width: 100px;
     height: 35px;
+    font-weight: bold;
     transition: width 2s, height 2s, background-color 2s;
+}
+
+.mensajeHoverM {
+    width: 200px;
+    width: 50px;
+    background-color: gray;
+    padding: 10px;
+    border-style: none;
+    color: white;
 }
